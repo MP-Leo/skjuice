@@ -2,6 +2,7 @@ package br.com.skjuice.entities;
 
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
@@ -14,17 +15,18 @@ public class Product {
 
     private String name;
     private String description;
-    private Double price;
-
+    private String flavor;
+    private BigDecimal price;
 
     // CONSTRUCTOS
 
     public Product() {
     }
 
-    public Product(String name, String description, Double price) {
+    public Product(String name, String description, String flavor, BigDecimal price) {
         this.name = name;
         this.description = description;
+        this.flavor = flavor;
         this.price = price;
     }
 
@@ -65,11 +67,19 @@ public class Product {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
     }
 }

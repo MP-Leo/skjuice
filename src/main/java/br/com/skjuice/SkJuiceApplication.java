@@ -8,17 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class SkJuiceApplication {
-
-	@Autowired
-	@Qualifier("applicationName")
-	private String applicationName;
-
-	@GetMapping("/")
-	public String helloWord(){
-		return applicationName;
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SkJuiceApplication.class, args);
