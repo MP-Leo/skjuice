@@ -1,8 +1,8 @@
 package br.com.skjuice.repositories;
 
-import br.com.skjuice.entities.Product;
-import br.com.skjuice.entities.ProductPage;
-import br.com.skjuice.entities.ProductRequisition;
+import br.com.skjuice.entities.product.Product;
+import br.com.skjuice.entities.product.ProductPage;
+import br.com.skjuice.entities.product.ProductRequisition;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Repository;
 
@@ -58,27 +58,24 @@ public class ProductCriteriaRepositorie {
         if(Objects.nonNull(productRequisition.getDescription())){
             predicates.add(
                     criteriaBuilder.like(
-                            criteriaBuilder.lower(
-                                    productRoot.get("description")),
-                            "%".concat(productRequisition.getDescription().toLowerCase().concat("%")))
+                            criteriaBuilder.lower(productRoot.get("description")),
+                            criteriaBuilder.literal("%" + productRequisition.getDescription().toLowerCase() + "%"))
             );
         }
 
         if(Objects.nonNull(productRequisition.getName())){
             predicates.add(
                     criteriaBuilder.like(
-                            criteriaBuilder.lower(
-                                    productRoot.get("name")),
-                            "%".concat(productRequisition.getName().toLowerCase().concat("%")))
+                            criteriaBuilder.lower(productRoot.get("name")),
+                            criteriaBuilder.literal("%" + productRequisition.getName().toLowerCase() + "%"))
             );
         }
 
         if(Objects.nonNull(productRequisition.getFlavor())){
             predicates.add(
                     criteriaBuilder.like(
-                            criteriaBuilder.lower(
-                                    productRoot.get("flavor")),
-                            "%".concat(productRequisition.getFlavor().toLowerCase().concat("%")))
+                            criteriaBuilder.lower(productRoot.get("flavor")),
+                            criteriaBuilder.literal("%" + productRequisition.getFlavor().toLowerCase() + "%"))
             );
         }
 

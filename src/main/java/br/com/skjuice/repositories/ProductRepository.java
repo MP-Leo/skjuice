@@ -1,8 +1,7 @@
 package br.com.skjuice.repositories;
 
-import br.com.skjuice.entities.Product;
+import br.com.skjuice.entities.product.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 

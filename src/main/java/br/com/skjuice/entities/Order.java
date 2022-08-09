@@ -1,5 +1,7 @@
 package br.com.skjuice.entities;
 
+import br.com.skjuice.entities.product.Product;
+
 import javax.persistence.*;
 
 @Entity

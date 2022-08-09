@@ -1,8 +1,8 @@
 package br.com.skjuice.services;
 
-import br.com.skjuice.entities.Product;
-import br.com.skjuice.entities.ProductPage;
-import br.com.skjuice.entities.ProductRequisition;
+import br.com.skjuice.entities.product.Product;
+import br.com.skjuice.entities.product.ProductPage;
+import br.com.skjuice.entities.product.ProductRequisition;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

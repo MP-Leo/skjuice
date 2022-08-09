@@ -1,9 +1,9 @@
 package br.com.skjuice.controllers;
 
-import br.com.skjuice.entities.Product;
+import br.com.skjuice.entities.product.Product;
 
-import br.com.skjuice.entities.ProductPage;
-import br.com.skjuice.entities.ProductRequisition;
+import br.com.skjuice.entities.product.ProductPage;
+import br.com.skjuice.entities.product.ProductRequisition;
 import br.com.skjuice.services.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

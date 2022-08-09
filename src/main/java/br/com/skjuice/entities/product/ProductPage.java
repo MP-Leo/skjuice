@@ -1,4 +1,4 @@
-package br.com.skjuice.entities;
+package br.com.skjuice.entities.product;
 
 import org.springframework.data.domain.Sort;
 
