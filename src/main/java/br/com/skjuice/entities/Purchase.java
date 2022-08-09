@@ -20,8 +20,8 @@ public class Purchase {
     @Column(name = "final_price", length = 20, precision = 2)
     private BigDecimal finalPrice;
 
-    @Column(name = "order_date")
-    private LocalDateTime orderDate;
+    @Column(name = "purchase_date")
+    private LocalDateTime purchaseDate;
 
     @OneToMany
     private List<Order> orders;
@@ -34,16 +34,20 @@ public class Purchase {
     public Purchase() {
     }
 
-    public Purchase(Client client, BigDecimal finalPrice, LocalDateTime orderDate) {
+    public Purchase(Client client, BigDecimal finalPrice, LocalDateTime purchaseDate) {
         this.client = client;
         this.finalPrice = finalPrice;
-        this.orderDate = orderDate;
+        this.purchaseDate = purchaseDate;
     }
 
 
     // GETTERS AND SETTERS
     public Long getId() {
         return id;
+    }
+
+    public Boolean getApproved() {
+        return approved;
     }
 
     public Client getClient() {
@@ -63,10 +67,10 @@ public class Purchase {
     }
 
     public LocalDateTime getOrderDate() {
-        return orderDate;
+        return purchaseDate;
     }
 
     public void setOrderDate(LocalDateTime localDateTime) {
-        this.orderDate = localDateTime;
+        this.purchaseDate = localDateTime;
     }
 }
