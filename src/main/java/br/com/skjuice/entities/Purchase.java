@@ -1,5 +1,7 @@
 package br.com.skjuice.entities;
 
+import br.com.skjuice.entities.client.Client;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
